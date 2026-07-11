@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="SusuTrust brings Ghana's traditional susu group savings to any phone — no smartphone or internet needed. Ghana Card verified, TrustScore protected, works on MTN, Telecel and AirtelTigo.">
+  <meta name="description"
+    content="SusuTrust brings Ghana's traditional susu group savings to any phone — no smartphone or internet needed. Ghana Card verified, TrustScore protected, works on MTN, Telecel and AirtelTigo.">
   <title>SusuTrust • Group Savings, Verified &amp; Automated</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -20,13 +21,17 @@
       --ink: #0b0f19;
     }
 
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'Inter', system-ui, sans-serif;
     }
 
-    .heading-font { font-family: 'Space Grotesk', sans-serif; }
+    .heading-font {
+      font-family: 'Space Grotesk', sans-serif;
+    }
 
     .glass {
       background: rgba(255, 255, 255, 0.72);
@@ -49,18 +54,30 @@
         radial-gradient(at center bottom, #ffffff 0%, #f5f5f5 70%);
     }
 
-    .nav-link { position: relative; }
+    .nav-link {
+      position: relative;
+    }
+
     .nav-link:after {
       content: '';
       position: absolute;
-      width: 0; height: 2px;
-      bottom: -4px; left: 0;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
       background-color: var(--teal-light);
       transition: width 0.25s ease;
     }
-    .nav-link:hover:after, .nav-link:focus-visible:after { width: 100%; }
 
-    .feature-card { transition: transform 0.35s cubic-bezier(.4,0,.2,1), box-shadow 0.35s ease, border-color .35s ease; }
+    .nav-link:hover:after,
+    .nav-link:focus-visible:after {
+      width: 100%;
+    }
+
+    .feature-card {
+      transition: transform 0.35s cubic-bezier(.4, 0, .2, 1), box-shadow 0.35s ease, border-color .35s ease;
+    }
+
     .feature-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 25px 50px -18px rgb(15 23 42 / 0.18);
@@ -68,39 +85,84 @@
     }
 
     .phone-frame {
-      box-shadow: 0 25px 60px -15px rgb(15 23 42 / 0.35), inset 0 4px 12px rgba(255,255,255,0.05);
+      box-shadow: 0 25px 60px -15px rgb(15 23 42 / 0.35), inset 0 4px 12px rgba(255, 255, 255, 0.05);
     }
 
     .step-line {
-      background: linear-gradient(90deg, rgba(37,99,235,0) 0%, rgba(37,99,235,0.5) 50%, rgba(37,99,235,0) 100%);
+      background: linear-gradient(90deg, rgba(37, 99, 235, 0) 0%, rgba(37, 99, 235, 0.5) 50%, rgba(37, 99, 235, 0) 100%);
     }
 
     /* USSD screen auto-cycle animation (purely decorative, respects reduced motion) */
     @keyframes ussd-cycle {
-      0%, 22% { opacity: 1; transform: translateY(0); }
-      28%, 100% { opacity: 0; transform: translateY(-8px); pointer-events: none; }
-    }
-    .ussd-frame { animation: ussd-cycle 9s infinite; animation-delay: var(--delay, 0s); position: absolute; inset: 0; }
-    .ussd-frame:first-child { position: relative; }
 
-    .score-fill { transition: width 1.2s cubic-bezier(.4,0,.2,1); }
+      0%,
+      22% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      28%,
+      100% {
+        opacity: 0;
+        transform: translateY(-8px);
+        pointer-events: none;
+      }
+    }
+
+    .ussd-frame {
+      animation: ussd-cycle 9s infinite;
+      animation-delay: var(--delay, 0s);
+      position: absolute;
+      inset: 0;
+    }
+
+    .ussd-frame:first-child {
+      position: relative;
+    }
+
+    .score-fill {
+      transition: width 1.2s cubic-bezier(.4, 0, .2, 1);
+    }
 
     /* Focus visibility for keyboard users */
-    a:focus-visible, button:focus-visible {
+    a:focus-visible,
+    button:focus-visible {
       outline: 2px solid var(--teal-light);
       outline-offset: 3px;
       border-radius: 4px;
     }
 
     @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .ussd-frame { animation: none !important; opacity: 1 !important; position: relative !important; }
-      .animate-pulse, .feature-card, .score-fill { transition: none !important; animation: none !important; }
+      html {
+        scroll-behavior: auto;
+      }
+
+      .ussd-frame {
+        animation: none !important;
+        opacity: 1 !important;
+        position: relative !important;
+      }
+
+      .animate-pulse,
+      .feature-card,
+      .score-fill {
+        transition: none !important;
+        animation: none !important;
+      }
     }
 
-    ::-webkit-scrollbar { width: 10px; }
-    ::-webkit-scrollbar-track { background: var(--bg); }
-    ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 8px; }
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #94a3b8;
+      border-radius: 8px;
+    }
   </style>
 </head>
 
@@ -125,6 +187,7 @@
       <div class="hidden lg:flex items-center gap-x-10 text-sm font-medium">
         <a href="#how" class="nav-link text-gray-600 hover:text-blue-700 transition-colors">How it Works</a>
         <a href="#trust" class="nav-link text-gray-600 hover:text-blue-700 transition-colors">TrustScore</a>
+        <a href="#guarantee" class="nav-link text-gray-600 hover:text-blue-700 transition-colors">Payout Guarantee</a>
         <a href="#reliability" class="nav-link text-gray-600 hover:text-blue-700 transition-colors">Automation</a>
         <a href="#security" class="nav-link text-gray-600 hover:text-blue-700 transition-colors">Security</a>
         <a href="#faq" class="nav-link text-gray-600 hover:text-blue-700 transition-colors">FAQ</a>
@@ -154,6 +217,7 @@
     <div id="mobile-menu" class="hidden md:hidden border-t border-black/10 bg-[#f5f5f5]/98 px-5 py-6 space-y-5">
       <a href="#how" onclick="toggleMobileMenu()" class="block text-gray-800 text-base">How it Works</a>
       <a href="#trust" onclick="toggleMobileMenu()" class="block text-gray-800 text-base">TrustScore</a>
+      <a href="#guarantee" onclick="toggleMobileMenu()" class="block text-gray-800 text-base">Payout Guarantee</a>
       <a href="#reliability" onclick="toggleMobileMenu()" class="block text-gray-800 text-base">Automation</a>
       <a href="#security" onclick="toggleMobileMenu()" class="block text-gray-800 text-base">Security</a>
       <a href="#faq" onclick="toggleMobileMenu()" class="block text-gray-800 text-base">FAQ</a>
@@ -164,7 +228,8 @@
           <span class="font-mono tracking-widest">*919*4010#</span>
         </button>
         <a href="tel:*919*4010%23"
-          class="w-full text-center px-6 py-3.5 bg-[#1d4ed8] text-white font-semibold rounded-2xl text-sm">Dial to Start</a>
+          class="w-full text-center px-6 py-3.5 bg-[#1d4ed8] text-white font-semibold rounded-2xl text-sm">Dial to
+          Start</a>
       </div>
     </div>
   </nav>
@@ -174,7 +239,8 @@
     <section class="hero-bg min-h-screen pt-32 sm:pt-36 pb-20 flex items-center relative">
       <div class="max-w-screen-2xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 lg:gap-16 items-center">
         <div class="space-y-8">
-          <div class="inline-flex items-center rounded-2xl bg-black/5 border border-black/10 px-4 py-2 text-xs sm:text-sm">
+          <div
+            class="inline-flex items-center rounded-2xl bg-black/5 border border-black/10 px-4 py-2 text-xs sm:text-sm">
             <i class="fa-solid fa-signal text-emerald-600 mr-2" aria-hidden="true"></i>
             No smartphone. No data. No app to download.
           </div>
@@ -223,7 +289,8 @@
 
         <!-- Phone Mock -->
         <div class="relative flex justify-center lg:justify-end">
-          <div class="phone-frame bg-black w-full max-w-[300px] sm:max-w-[340px] mx-auto rounded-[48px] p-3.5 border-[12px] border-zinc-900 relative">
+          <div
+            class="phone-frame bg-black w-full max-w-[300px] sm:max-w-[340px] mx-auto rounded-[48px] p-3.5 border-[12px] border-zinc-900 relative">
             <div class="absolute top-5 left-1/2 -translate-x-1/2 w-24 h-5 bg-black rounded-full z-10"></div>
 
             <div class="bg-zinc-950 text-white h-[560px] sm:h-[600px] rounded-[36px] overflow-hidden relative">
@@ -257,7 +324,8 @@
                         <div class="text-xs text-gray-400">Enter 4-digit code</div>
                       </div>
                     </div>
-                    <div class="glass-dark rounded-2xl p-4 flex items-center gap-3.5 border border-blue-600/30 bg-blue-900/20">
+                    <div
+                      class="glass-dark rounded-2xl p-4 flex items-center gap-3.5 border border-blue-600/30 bg-blue-900/20">
                       <div class="w-9 h-9 bg-blue-600/30 rounded-xl flex items-center justify-center shrink-0">
                         <i class="fa-solid fa-money-bill-wave text-blue-600 text-sm" aria-hidden="true"></i>
                       </div>
@@ -291,7 +359,8 @@
                       <span class="text-gray-400">Group</span><span>Kotoko Traders</span>
                     </div>
                     <div class="flex justify-between text-sm">
-                      <span class="text-gray-400">Amount</span><span class="text-emerald-400 font-semibold">GH₵50.00</span>
+                      <span class="text-gray-400">Amount</span><span
+                        class="text-emerald-400 font-semibold">GH₵50.00</span>
                     </div>
                     <div class="flex justify-between text-sm">
                       <span class="text-gray-400">Network</span><span>MTN MoMo</span>
@@ -309,7 +378,8 @@
                     </div>
                     <div class="heading-font text-2xl font-semibold">Payment Received!</div>
                     <p class="text-sm text-gray-400 mt-2 px-4">GH₵50 added to Kotoko Traders' pot. TrustScore +2.</p>
-                    <div class="mt-6 inline-flex items-center gap-2 glass-dark px-5 py-3 rounded-2xl border border-emerald-400/30">
+                    <div
+                      class="mt-6 inline-flex items-center gap-2 glass-dark px-5 py-3 rounded-2xl border border-emerald-400/30">
                       <i class="fa-solid fa-arrow-trend-up text-emerald-400" aria-hidden="true"></i>
                       <span class="text-sm font-medium">TrustScore: 120</span>
                     </div>
@@ -333,11 +403,15 @@
 
     <!-- NETWORK STRIP -->
     <section class="border-y border-black/10 bg-[#eef2f7] py-6">
-      <div class="max-w-screen-2xl mx-auto px-5 sm:px-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-sm text-gray-600">
+      <div
+        class="max-w-screen-2xl mx-auto px-5 sm:px-8 flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-sm text-gray-600">
         <span class="uppercase tracking-widest text-xs text-gray-500">Works on every network</span>
-        <span class="flex items-center gap-2"><i class="fa-solid fa-signal text-blue-600" aria-hidden="true"></i> MTN Mobile Money</span>
-        <span class="flex items-center gap-2"><i class="fa-solid fa-signal text-blue-600" aria-hidden="true"></i> Telecel Cash</span>
-        <span class="flex items-center gap-2"><i class="fa-solid fa-signal text-blue-600" aria-hidden="true"></i> AirtelTigo Money</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-signal text-blue-600" aria-hidden="true"></i> MTN
+          Mobile Money</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-signal text-blue-600" aria-hidden="true"></i>
+          Telecel Cash</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-signal text-blue-600" aria-hidden="true"></i>
+          AirtelTigo Money</span>
       </div>
     </section>
 
@@ -348,8 +422,10 @@
           <span class="px-5 py-2 text-blue-600 text-xs sm:text-sm font-semibold border border-blue-600/20 rounded-2xl">
             FOUR STEPS, ONE DIAL CODE
           </span>
-          <h2 class="heading-font text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter mt-6">How SusuTrust Works</h2>
-          <p class="text-gray-600 mt-4 text-lg">The exact same rotational savings your family has always used — just verified and automated.</p>
+          <h2 class="heading-font text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter mt-6">How SusuTrust
+            Works</h2>
+          <p class="text-gray-600 mt-4 text-lg">The exact same rotational savings your family has always used — just
+            verified and automated.</p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -361,7 +437,8 @@
               <span class="heading-font text-3xl text-black/10 font-semibold">01</span>
             </div>
             <h3 class="text-xl font-semibold mb-3">Register once</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">Enter your Ghana Card number and Mobile Money wallet. We confirm the account name matches before you save a cedi.</p>
+            <p class="text-gray-600 leading-relaxed text-sm">Enter your Ghana Card number and Mobile Money wallet. We
+              confirm the account name matches before you save a cedi.</p>
           </div>
 
           <div class="feature-card glass rounded-3xl p-8 border border-black/5">
@@ -372,7 +449,8 @@
               <span class="heading-font text-3xl text-black/10 font-semibold">02</span>
             </div>
             <h3 class="text-xl font-semibold mb-3">Create or join a circle</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">Set your contribution amount, frequency and group size — get a 4-digit code to share. Or join a friend's group with theirs.</p>
+            <p class="text-gray-600 leading-relaxed text-sm">Set your contribution amount, frequency and group size —
+              get a 4-digit code to share. Or join a friend's group with theirs.</p>
           </div>
 
           <div class="feature-card glass rounded-3xl p-8 border border-black/5">
@@ -383,7 +461,9 @@
               <span class="heading-font text-3xl text-black/10 font-semibold">03</span>
             </div>
             <h3 class="text-xl font-semibold mb-3">Contribute, your way</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">Choose <strong class="text-gray-800">Automatic</strong> — we send a MoMo prompt on schedule — or <strong class="text-gray-800">Manual</strong> if you'd rather pay it yourself.</p>
+            <p class="text-gray-600 leading-relaxed text-sm">Choose <strong class="text-gray-800">Automatic</strong> —
+              we send a MoMo prompt on schedule — or <strong class="text-gray-800">Manual</strong> if you'd rather pay
+              it yourself.</p>
           </div>
 
           <div class="feature-card glass rounded-3xl p-8 border border-black/5">
@@ -394,7 +474,8 @@
               <span class="heading-font text-3xl text-black/10 font-semibold">04</span>
             </div>
             <h3 class="text-xl font-semibold mb-3">Get paid, in order</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">Each round, the group's pot is sent straight to one member's wallet — priority decided by TrustScore, not guesswork.</p>
+            <p class="text-gray-600 leading-relaxed text-sm">Each round, the group's pot is sent straight to one
+              member's wallet — priority decided by TrustScore, not guesswork.</p>
           </div>
         </div>
       </div>
@@ -407,7 +488,8 @@
           <div class="lg:col-span-5">
             <div class="max-w-md">
               <div class="uppercase text-blue-600 text-sm tracking-[2px] font-medium">HOW PAYOUT ORDER IS DECIDED</div>
-              <h2 class="heading-font text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-tighter mt-4">
+              <h2
+                class="heading-font text-4xl sm:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-tighter mt-4">
                 The TrustScore Engine
               </h2>
               <p class="mt-6 text-gray-600 text-lg leading-relaxed">
@@ -417,7 +499,8 @@
 
               <div class="mt-10 space-y-7">
                 <div class="flex gap-5">
-                  <div class="text-emerald-600 shrink-0 w-11 h-11 bg-emerald-600/10 rounded-xl flex items-center justify-center">
+                  <div
+                    class="text-emerald-600 shrink-0 w-11 h-11 bg-emerald-600/10 rounded-xl flex items-center justify-center">
                     <i class="fa-solid fa-arrow-trend-up text-xl" aria-hidden="true"></i>
                   </div>
                   <div>
@@ -426,21 +509,36 @@
                   </div>
                 </div>
                 <div class="flex gap-5">
-                  <div class="text-amber-600 shrink-0 w-11 h-11 bg-amber-600/10 rounded-xl flex items-center justify-center">
+                  <div
+                    class="text-amber-600 shrink-0 w-11 h-11 bg-amber-600/10 rounded-xl flex items-center justify-center">
+                    <i class="fa-solid fa-bell text-xl" aria-hidden="true"></i>
+                  </div>
+                  <div>
+                    <div class="font-semibold">-5 points for an overdue round</div>
+                    <div class="text-sm text-gray-600 mt-0.5">A daily check flags anyone yet to pay for the current
+                      round</div>
+                  </div>
+                </div>
+                <div class="flex gap-5">
+                  <div
+                    class="text-amber-600 shrink-0 w-11 h-11 bg-amber-600/10 rounded-xl flex items-center justify-center">
                     <i class="fa-solid fa-arrow-trend-down text-xl" aria-hidden="true"></i>
                   </div>
                   <div>
                     <div class="font-semibold">-10 points for a missed automatic collection</div>
-                    <div class="text-sm text-gray-600 mt-0.5">You and your group leader are notified by SMS instantly</div>
+                    <div class="text-sm text-gray-600 mt-0.5">You and your group leader are notified by SMS instantly
+                    </div>
                   </div>
                 </div>
                 <div class="flex gap-5">
-                  <div class="text-rose-600 shrink-0 w-11 h-11 bg-rose-600/10 rounded-xl flex items-center justify-center">
+                  <div
+                    class="text-rose-600 shrink-0 w-11 h-11 bg-rose-600/10 rounded-xl flex items-center justify-center">
                     <i class="fa-solid fa-user-slash text-xl" aria-hidden="true"></i>
                   </div>
                   <div>
                     <div class="font-semibold">Below 70 points, you're automatically removed</div>
-                    <div class="text-sm text-gray-600 mt-0.5">Protects everyone else's payout from a serial defaulter</div>
+                    <div class="text-sm text-gray-600 mt-0.5">Protects everyone else's payout from a serial defaulter
+                    </div>
                   </div>
                 </div>
               </div>
@@ -460,7 +558,9 @@
                 <div class="space-y-6">
                   <div class="flex items-center justify-between gap-3">
                     <div class="flex items-center gap-x-4 min-w-0">
-                      <div class="w-10 h-10 shrink-0 bg-emerald-400 text-black rounded-xl flex items-center justify-center font-bold">1</div>
+                      <div
+                        class="w-10 h-10 shrink-0 bg-emerald-400 text-black rounded-xl flex items-center justify-center font-bold">
+                        1</div>
                       <div class="min-w-0">
                         <div class="truncate">Akosua Mensah</div>
                         <div class="text-emerald-400 text-sm">Score 128 • On-time streak</div>
@@ -471,7 +571,9 @@
 
                   <div class="flex items-center justify-between gap-3">
                     <div class="flex items-center gap-x-4 min-w-0">
-                      <div class="w-10 h-10 shrink-0 bg-blue-600/80 text-black rounded-xl flex items-center justify-center font-bold">2</div>
+                      <div
+                        class="w-10 h-10 shrink-0 bg-blue-600/80 text-black rounded-xl flex items-center justify-center font-bold">
+                        2</div>
                       <div class="min-w-0">
                         <div class="truncate">Kofi Osei</div>
                         <div class="text-blue-500 text-sm">Score 112 • Good standing</div>
@@ -482,7 +584,9 @@
 
                   <div class="flex items-center justify-between gap-3 opacity-70">
                     <div class="flex items-center gap-x-4 min-w-0">
-                      <div class="w-10 h-10 shrink-0 bg-amber-400/80 text-black rounded-xl flex items-center justify-center font-bold">3</div>
+                      <div
+                        class="w-10 h-10 shrink-0 bg-amber-400/80 text-black rounded-xl flex items-center justify-center font-bold">
+                        3</div>
                       <div class="min-w-0">
                         <div class="truncate">Yaw Boateng</div>
                         <div class="text-amber-300 text-sm">Score 94 • 1 missed payment</div>
@@ -491,7 +595,8 @@
                     <div class="text-right text-gray-400 text-sm shrink-0">Round 6</div>
                   </div>
                 </div>
-                <p class="text-xs text-gray-500 mt-8">Ties are broken by who joined the group first — first come, first served.</p>
+                <p class="text-xs text-gray-500 mt-8">Ties are broken by who joined the group first — first come, first
+                  served.</p>
               </div>
             </div>
           </div>
@@ -499,47 +604,125 @@
       </div>
     </section>
 
-    <!-- RELIABILITY / AUTOMATION -->
+    <!-- PAYOUT GUARANTEE -->
+    <section id="guarantee" class="py-24 sm:py-28">
+      <div class="max-w-screen-2xl mx-auto px-5 sm:px-8">
+        <div class="text-center mb-16 max-w-2xl mx-auto">
+          <span class="px-5 py-2 text-blue-600 text-xs sm:text-sm font-semibold border border-blue-600/20 rounded-2xl">
+            WHY EARLY PAYOUTS STILL PROTECT THE GROUP
+          </span>
+          <h2 class="heading-font text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter mt-6">The Payout
+            Guarantee</h2>
+          <p class="text-gray-600 mt-4 text-lg">Getting paid early doesn't mean walking away from what you still owe.
+            Part of every payout is held back as collateral — sized to how many rounds are left, never a flat cut.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-6">
+          <div class="glass rounded-3xl p-8 sm:p-10 border border-black/5">
+            <div class="flex items-center justify-between mb-7">
+              <div class="font-medium">Paid out in Round 2 of 10</div>
+              <div class="px-3.5 py-1 bg-amber-100 text-amber-700 text-xs rounded-2xl">8 rounds still owed</div>
+            </div>
+            <div class="flex items-end gap-1 h-32 rounded-2xl overflow-hidden">
+              <div
+                class="bg-blue-600 h-1/2 w-1/2 flex items-start justify-center pt-3 text-white font-semibold text-sm">
+                Released 50%</div>
+              <div
+                class="bg-gray-300 h-full w-1/2 flex items-start justify-center pt-3 text-gray-700 font-semibold text-sm">
+                Held 50%</div>
+            </div>
+            <p class="mt-5 text-gray-600 text-sm leading-relaxed">Early in the cycle you still owe most of your future
+              contributions, so the held share sits near the ceiling.</p>
+          </div>
+
+          <div class="glass rounded-3xl p-8 sm:p-10 border border-black/5">
+            <div class="flex items-center justify-between mb-7">
+              <div class="font-medium">Paid out in Round 9 of 10</div>
+              <div class="px-3.5 py-1 bg-emerald-100 text-emerald-700 text-xs rounded-2xl">1 round still owed</div>
+            </div>
+            <div class="flex items-end gap-1 h-32 rounded-2xl overflow-hidden">
+              <div
+                class="bg-blue-600 h-[90%] w-1/2 flex items-start justify-center pt-3 text-white font-semibold text-sm">
+                Released 90%</div>
+              <div
+                class="bg-gray-300 h-full w-1/2 flex items-start justify-center pt-3 text-gray-700 font-semibold text-sm">
+                Held 10%</div>
+            </div>
+            <p class="mt-5 text-gray-600 text-sm leading-relaxed">Near the end of the cycle you owe almost nothing
+              further, so nearly all of your payout reaches your wallet right away.</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+          <div class="glass p-8 rounded-3xl feature-card border border-black/5">
+            <i class="fa-solid fa-lock text-3xl text-blue-600 mb-5" aria-hidden="true"></i>
+            <h4 class="font-semibold text-xl">Held, not lost</h4>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">Your held balance shrinks automatically every time you
+              complete another round — always sized to what you still owe, never a flat cut.</p>
+          </div>
+          <div class="glass p-8 rounded-3xl feature-card border border-black/5">
+            <i class="fa-solid fa-rotate text-3xl text-blue-600 mb-5" aria-hidden="true"></i>
+            <h4 class="font-semibold text-xl">Released as you pay</h4>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">Each confirmed contribution after your payout
+              recalculates what's still required and sends any excess straight to your MoMo wallet.</p>
+          </div>
+          <div class="glass p-8 rounded-3xl feature-card border border-black/5">
+            <i class="fa-solid fa-hand-holding-dollar text-3xl text-blue-600 mb-5" aria-hidden="true"></i>
+            <h4 class="font-semibold text-xl">Protects the group</h4>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">If a member defaults after being paid out, their held
+              balance returns to the group pot instead of leaving everyone else short.</p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="reliability" class="py-24 sm:py-28 bg-[#eef2f7]">
       <div class="max-w-screen-2xl mx-auto px-5 sm:px-8">
         <div class="text-center mb-16 max-w-2xl mx-auto">
           <span class="px-5 py-2 text-blue-600 text-xs sm:text-sm font-semibold border border-blue-600/20 rounded-2xl">
             RUNS ITSELF, WATCHES ITSELF
           </span>
-          <h2 class="heading-font text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter mt-6">Built to never lose track of your money</h2>
-          <p class="text-gray-600 mt-4 text-lg">No leader has to remember who paid, who's next, or chase anyone down.</p>
+          <h2 class="heading-font text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter mt-6">Built to never
+            lose track of your money</h2>
+          <p class="text-gray-600 mt-4 text-lg">No leader has to remember who paid, who's next, or chase anyone down.
+          </p>
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div class="glass p-8 rounded-3xl feature-card border border-black/5">
             <i class="fa-solid fa-bell text-3xl text-blue-600 mb-5" aria-hidden="true"></i>
             <h4 class="font-semibold text-xl">Reminders, right on time</h4>
-            <p class="mt-3 text-gray-600 text-sm leading-relaxed">Automatic SMS reminders go out at 9am and 5pm, matched to whether your group is daily, weekly or monthly.</p>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">Automatic SMS reminders go out at 9am and 5pm, matched
+              to whether your group is daily, weekly or monthly.</p>
           </div>
           <div class="glass p-8 rounded-3xl feature-card border border-black/5">
             <i class="fa-solid fa-receipt text-3xl text-blue-600 mb-5" aria-hidden="true"></i>
             <h4 class="font-semibold text-xl">A receipt for everything</h4>
-            <p class="mt-3 text-gray-600 text-sm leading-relaxed">Every contribution, payout, and status change is logged to an audit trail — nothing happens off the record.</p>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">Every contribution, payout, and status change is
+              logged to an audit trail — nothing happens off the record.</p>
           </div>
           <div class="glass p-8 rounded-3xl feature-card border border-black/5">
             <i class="fa-solid fa-rotate text-3xl text-blue-600 mb-5" aria-hidden="true"></i>
             <h4 class="font-semibold text-xl">Payments that get checked twice</h4>
-            <p class="mt-3 text-gray-600 text-sm leading-relaxed">If a payment confirmation ever goes missing, our reconciliation system flags it and follows up — automatically.</p>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">If a payment confirmation ever goes missing, our
+              reconciliation system flags it and follows up — automatically.</p>
           </div>
           <div class="glass p-8 rounded-3xl feature-card border border-black/5">
             <i class="fa-solid fa-user-tie text-3xl text-blue-600 mb-5" aria-hidden="true"></i>
             <h4 class="font-semibold text-xl">A dashboard for the leader</h4>
-            <p class="mt-3 text-gray-600 text-sm leading-relaxed">Group leaders can push reminders, view the member list, and close out a completed cycle — right from the same dial code.</p>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">Group leaders can push reminders, view the member
+              list, and close out a completed cycle — right from the same dial code.</p>
           </div>
           <div class="glass p-8 rounded-3xl feature-card border border-black/5">
             <i class="fa-solid fa-shuffle text-3xl text-blue-600 mb-5" aria-hidden="true"></i>
             <h4 class="font-semibold text-xl">Automatic or manual, your call</h4>
-            <p class="mt-3 text-gray-600 text-sm leading-relaxed">Let SusuTrust request your Mobile Money PIN on schedule, or keep full control and pay in yourself each round.</p>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">Let SusuTrust request your Mobile Money PIN on
+              schedule, or keep full control and pay in yourself each round.</p>
           </div>
           <div class="glass p-8 rounded-3xl feature-card border border-black/5">
             <i class="fa-solid fa-mobile-screen-button text-3xl text-blue-600 mb-5" aria-hidden="true"></i>
             <h4 class="font-semibold text-xl">Built for every phone</h4>
-            <p class="mt-3 text-gray-600 text-sm leading-relaxed">USSD works on the most basic Nokia and the newest smartphone alike — no app, no data bundle, no barrier.</p>
+            <p class="mt-3 text-gray-600 text-sm leading-relaxed">USSD works on the most basic Nokia and the newest
+              smartphone alike — no app, no data bundle, no barrier.</p>
           </div>
         </div>
       </div>
@@ -559,22 +742,26 @@
               <div>
                 <i class="fa-solid fa-id-card-clip text-4xl text-blue-600" aria-hidden="true"></i>
                 <div class="mt-5 font-medium">Ghana Card Verification</div>
-                <div class="text-sm text-gray-600 mt-2">One national ID per account, checked before you can join a circle.</div>
+                <div class="text-sm text-gray-600 mt-2">One national ID per account, checked before you can join a
+                  circle.</div>
               </div>
               <div>
                 <i class="fa-solid fa-check-double text-4xl text-blue-600" aria-hidden="true"></i>
                 <div class="mt-5 font-medium">Wallet Name Matching</div>
-                <div class="text-sm text-gray-600 mt-2">We confirm your Mobile Money wallet's registered name before linking it.</div>
+                <div class="text-sm text-gray-600 mt-2">We confirm your Mobile Money wallet's registered name before
+                  linking it.</div>
               </div>
               <div>
                 <i class="fa-solid fa-lock text-4xl text-blue-600" aria-hidden="true"></i>
                 <div class="mt-5 font-medium">Your PIN never touches us</div>
-                <div class="text-sm text-gray-600 mt-2">Payment authorization happens on your network's own secure prompt.</div>
+                <div class="text-sm text-gray-600 mt-2">Payment authorization happens on your network's own secure
+                  prompt.</div>
               </div>
               <div>
                 <i class="fa-solid fa-clipboard-list text-4xl text-blue-600" aria-hidden="true"></i>
                 <div class="mt-5 font-medium">Full Audit Trail</div>
-                <div class="text-sm text-gray-600 mt-2">Every transaction is timestamped and traceable if a dispute ever comes up.</div>
+                <div class="text-sm text-gray-600 mt-2">Every transaction is timestamped and traceable if a dispute ever
+                  comes up.</div>
               </div>
             </div>
           </div>
@@ -600,8 +787,10 @@
             <span class="uppercase text-xs sm:text-sm font-medium tracking-widest">Simple &amp; Transparent</span>
           </div>
 
-          <h2 class="heading-font text-5xl sm:text-6xl font-semibold tracking-tighter">Almost every cedi you save, stays saved</h2>
-          <p class="text-gray-600 mt-4 text-lg">SusuTrust charges just a small 1% fee on each contribution — nothing else, ever.</p>
+          <h2 class="heading-font text-5xl sm:text-6xl font-semibold tracking-tighter">Almost every cedi you save, stays
+            saved</h2>
+          <p class="text-gray-600 mt-4 text-lg">SusuTrust charges just a small 1% fee on each contribution — nothing
+            else, ever.</p>
 
           <div class="mt-14 glass rounded-3xl p-10 sm:p-12 border border-black/5">
             <div class="flex justify-center items-baseline gap-x-2">
@@ -611,11 +800,16 @@
             <div class="text-gray-600 mt-2">fee per contribution — that's it</div>
 
             <ul class="mt-12 text-left space-y-5">
-              <li class="flex gap-x-4"><i class="fa-solid fa-check text-emerald-600 mt-1" aria-hidden="true"></i> Unlimited groups &amp; members (2–50 per circle)</li>
-              <li class="flex gap-x-4"><i class="fa-solid fa-check text-emerald-600 mt-1" aria-hidden="true"></i> Full Ghana Card verification</li>
-              <li class="flex gap-x-4"><i class="fa-solid fa-check text-emerald-600 mt-1" aria-hidden="true"></i> Automatic or manual MoMo collections</li>
-              <li class="flex gap-x-4"><i class="fa-solid fa-check text-emerald-600 mt-1" aria-hidden="true"></i> TrustScore-based payout protection</li>
-              <li class="flex gap-x-4"><i class="fa-solid fa-check text-emerald-600 mt-1" aria-hidden="true"></i> SMS confirmation for every transaction</li>
+              <li class="flex gap-x-4"><i class="fa-solid fa-check text-emerald-600 mt-1" aria-hidden="true"></i>
+                Unlimited groups &amp; members (2–50 per circle)</li>
+              <li class="flex gap-x-4"><i class="fa-solid fa-check text-emerald-600 mt-1" aria-hidden="true"></i> Full
+                Ghana Card verification</li>
+              <li class="flex gap-x-4"><i class="fa-solid fa-check text-emerald-600 mt-1" aria-hidden="true"></i>
+                Automatic or manual MoMo collections</li>
+              <li class="flex gap-x-4"><i class="fa-solid fa-check text-emerald-600 mt-1" aria-hidden="true"></i>
+                TrustScore-based payout protection</li>
+              <li class="flex gap-x-4"><i class="fa-solid fa-check text-emerald-600 mt-1" aria-hidden="true"></i> SMS
+                confirmation for every transaction</li>
             </ul>
 
             <a href="tel:*919*4010%23"
@@ -639,41 +833,68 @@
           <details class="glass rounded-2xl border border-black/5 p-6 group">
             <summary class="font-medium cursor-pointer list-none flex justify-between items-center gap-4">
               <span>Do I need a smartphone or internet to use SusuTrust?</span>
-              <i class="fa-solid fa-chevron-down text-blue-600 transition-transform group-open:rotate-180" aria-hidden="true"></i>
+              <i class="fa-solid fa-chevron-down text-blue-600 transition-transform group-open:rotate-180"
+                aria-hidden="true"></i>
             </summary>
-            <p class="text-gray-600 mt-4 text-sm leading-relaxed">No. SusuTrust runs entirely over USSD — the same code-dialling menus you use to check your MoMo balance. It works on any phone, on any of the supported networks, with zero data.</p>
+            <p class="text-gray-600 mt-4 text-sm leading-relaxed">No. SusuTrust runs entirely over USSD — the same
+              code-dialling menus you use to check your MoMo balance. It works on any phone, on any of the supported
+              networks, with zero data.</p>
           </details>
 
           <details class="glass rounded-2xl border border-black/5 p-6 group">
             <summary class="font-medium cursor-pointer list-none flex justify-between items-center gap-4">
               <span>What happens if I miss a contribution?</span>
-              <i class="fa-solid fa-chevron-down text-blue-600 transition-transform group-open:rotate-180" aria-hidden="true"></i>
+              <i class="fa-solid fa-chevron-down text-blue-600 transition-transform group-open:rotate-180"
+                aria-hidden="true"></i>
             </summary>
-            <p class="text-gray-600 mt-4 text-sm leading-relaxed">If an automatic collection fails, you and your group leader are notified immediately by SMS and your TrustScore drops by 10 points. Fall below 70 and you're automatically removed from the circle so the rest of the group isn't put at risk.</p>
+            <p class="text-gray-600 mt-4 text-sm leading-relaxed">If you haven't paid for the round yet, a daily check
+              flags it and your TrustScore drops by 5 points. If a scheduled automatic collection actually fails, that's
+              a steeper 10-point drop, and you and your group leader are notified immediately by SMS. Fall below 70 and
+              you're automatically removed from the circle so the rest of the group isn't put at risk.</p>
+          </details>
+
+          <details class="glass rounded-2xl border border-black/5 p-6 group">
+            <summary class="font-medium cursor-pointer list-none flex justify-between items-center gap-4">
+              <span>If I get paid out early, do I still have to keep contributing?</span>
+              <i class="fa-solid fa-chevron-down text-blue-600 transition-transform group-open:rotate-180"
+                aria-hidden="true"></i>
+            </summary>
+            <p class="text-gray-600 mt-4 text-sm leading-relaxed">Yes — and a portion of your payout is held back as a
+              guarantee until you do. How much is held depends on how many rounds you have left: getting paid out early
+              in the cycle holds back more, getting paid out near the end holds back very little. The held amount
+              shrinks automatically and pays out to your wallet as you keep contributing.</p>
           </details>
 
           <details class="glass rounded-2xl border border-black/5 p-6 group">
             <summary class="font-medium cursor-pointer list-none flex justify-between items-center gap-4">
               <span>Who decides the order people get paid in?</span>
-              <i class="fa-solid fa-chevron-down text-blue-600 transition-transform group-open:rotate-180" aria-hidden="true"></i>
+              <i class="fa-solid fa-chevron-down text-blue-600 transition-transform group-open:rotate-180"
+                aria-hidden="true"></i>
             </summary>
-            <p class="text-gray-600 mt-4 text-sm leading-relaxed">Your TrustScore does. Members with a higher score from consistent, on-time payments are prioritised for payout. If two members are tied, whoever joined the group first goes first.</p>
+            <p class="text-gray-600 mt-4 text-sm leading-relaxed">Your TrustScore does. Members with a higher score from
+              consistent, on-time payments are prioritised for payout. If two members are tied, whoever joined the group
+              first goes first.</p>
           </details>
 
           <details class="glass rounded-2xl border border-black/5 p-6 group">
             <summary class="font-medium cursor-pointer list-none flex justify-between items-center gap-4">
               <span>Can I choose to pay manually instead of automatic deductions?</span>
-              <i class="fa-solid fa-chevron-down text-blue-600 transition-transform group-open:rotate-180" aria-hidden="true"></i>
+              <i class="fa-solid fa-chevron-down text-blue-600 transition-transform group-open:rotate-180"
+                aria-hidden="true"></i>
             </summary>
-            <p class="text-gray-600 mt-4 text-sm leading-relaxed">Yes. When you join a group you choose Automatic (SusuTrust requests your MoMo PIN on schedule) or Manual (you dial in and pay it yourself each round) — you're not locked into one style.</p>
+            <p class="text-gray-600 mt-4 text-sm leading-relaxed">Yes. When you join a group you choose Automatic
+              (SusuTrust requests your MoMo PIN on schedule) or Manual (you dial in and pay it yourself each round) —
+              you're not locked into one style.</p>
           </details>
 
           <details class="glass rounded-2xl border border-black/5 p-6 group">
             <summary class="font-medium cursor-pointer list-none flex justify-between items-center gap-4">
               <span>Which mobile networks are supported?</span>
-              <i class="fa-solid fa-chevron-down text-blue-600 transition-transform group-open:rotate-180" aria-hidden="true"></i>
+              <i class="fa-solid fa-chevron-down text-blue-600 transition-transform group-open:rotate-180"
+                aria-hidden="true"></i>
             </summary>
-            <p class="text-gray-600 mt-4 text-sm leading-relaxed">MTN Mobile Money, Telecel Cash, and AirtelTigo Money are all supported for both contributions and payouts.</p>
+            <p class="text-gray-600 mt-4 text-sm leading-relaxed">MTN Mobile Money, Telecel Cash, and AirtelTigo Money
+              are all supported for both contributions and payouts.</p>
           </details>
         </div>
       </div>
@@ -682,7 +903,8 @@
     <!-- FINAL CTA -->
     <section class="py-28 sm:py-32 bg-gradient-to-b from-transparent to-blue-950/25">
       <div class="max-w-2xl mx-auto text-center px-6">
-        <h2 class="heading-font text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter">Start saving together, today</h2>
+        <h2 class="heading-font text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tighter">Start saving together,
+          today</h2>
         <p class="text-gray-600 mt-5 text-lg">Registration takes under two minutes. No paperwork, no branch visit.</p>
         <a href="tel:*920*440%23"
           class="mt-10 px-10 sm:px-16 py-6 sm:py-7 text-lg sm:text-xl font-semibold bg-black text-white rounded-2xl inline-flex items-center gap-x-4 hover:bg-blue-700 transition-colors">
@@ -699,12 +921,14 @@
       <div class="flex flex-col md:flex-row justify-between gap-12">
         <div class="max-w-xs">
           <div class="flex items-center gap-x-3">
-            <div class="w-9 h-9 bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center">
+            <div
+              class="w-9 h-9 bg-gradient-to-br from-blue-600 to-blue-800 rounded-2xl flex items-center justify-center">
               <i class="fa-solid fa-hand-holding-dollar text-white" aria-hidden="true"></i>
             </div>
             <span class="heading-font text-3xl font-semibold">SusuTrust</span>
           </div>
-          <p class="mt-6 text-gray-400 text-sm leading-relaxed">Ghana's rotational savings tradition, verified and automated — accessible from any phone, on any network.</p>
+          <p class="mt-6 text-gray-400 text-sm leading-relaxed">Ghana's rotational savings tradition, verified and
+            automated — accessible from any phone, on any network.</p>
           <a href="tel:0549856098" class="mt-6 inline-flex items-center gap-2 text-sm text-gray-400 hover:text-white">
             <i class="fa-solid fa-headset text-blue-600" aria-hidden="true"></i> Support: 0549 856 098
           </a>
@@ -738,19 +962,23 @@
         </div>
       </div>
 
-      <div class="mt-16 pt-8 border-t border-white/10 text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div
+        class="mt-16 pt-8 border-t border-white/10 text-xs text-gray-500 flex flex-col md:flex-row justify-between items-center gap-4">
         <div>© 2026 SusuTrust • Kumasi, Ghana</div>
         <div class="flex gap-x-6">
-          <a href="#" aria-label="SusuTrust on X (Twitter)" class="hover:text-white"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-          <a href="#" aria-label="Chat with SusuTrust on WhatsApp" class="hover:text-white"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          <a href="#" aria-label="SusuTrust on X (Twitter)" class="hover:text-white"><i class="fa-brands fa-x-twitter"
+              aria-hidden="true"></i></a>
+          <a href="#" aria-label="Chat with SusuTrust on WhatsApp" class="hover:text-white"><i
+              class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- USSD MODAL -->
-  <div id="ussd-modal" class="hidden fixed inset-0 bg-black/90 backdrop-blur-2xl z-[9999] items-center justify-center p-6"
-    role="dialog" aria-modal="true" aria-labelledby="ussd-modal-title">
+  <div id="ussd-modal"
+    class="hidden fixed inset-0 bg-black/90 backdrop-blur-2xl z-[9999] items-center justify-center p-6" role="dialog"
+    aria-modal="true" aria-labelledby="ussd-modal-title">
     <div class="max-w-md w-full glass rounded-3xl p-8 sm:p-10 text-center border border-black/10 relative">
       <button onclick="hideUSSD()" aria-label="Close" class="absolute top-6 right-6 text-gray-600 hover:text-gray-900">
         <i class="fa-solid fa-xmark text-2xl" aria-hidden="true"></i>
@@ -760,15 +988,19 @@
         <div class="mx-auto w-16 h-16 sm:w-20 sm:h-20 bg-blue-600 rounded-3xl flex items-center justify-center">
           <i class="fa-solid fa-mobile-screen-button text-white text-4xl sm:text-5xl" aria-hidden="true"></i>
         </div>
-        <div id="ussd-modal-title" class="mt-8 font-mono text-4xl sm:text-5xl tracking-widest text-[#1d4ed8]">*919*4010#</div>
-        <p class="mt-6 text-gray-600">Dial this code on any phone, on any network, to register, create a circle, or make your contribution.</p>
+        <div id="ussd-modal-title" class="mt-8 font-mono text-4xl sm:text-5xl tracking-widest text-[#1d4ed8]">*919*4010#
+        </div>
+        <p class="mt-6 text-gray-600">Dial this code on any phone, on any network, to register, create a circle, or make
+          your contribution.</p>
       </div>
 
-      <a href="tel:*919*4010%23" class="mt-10 w-full py-5 bg-black text-white font-semibold rounded-2xl text-base flex items-center justify-center gap-x-3 hover:bg-gray-800 transition-colors">
+      <a href="tel:*919*4010%23"
+        class="mt-10 w-full py-5 bg-black text-white font-semibold rounded-2xl text-base flex items-center justify-center gap-x-3 hover:bg-gray-800 transition-colors">
         <i class="fa-solid fa-phone-volume" aria-hidden="true"></i>
         Dial Now
       </a>
-      <button onclick="hideUSSD()" class="mt-3 w-full py-4 text-gray-600 hover:text-gray-900 text-sm">Maybe later</button>
+      <button onclick="hideUSSD()" class="mt-3 w-full py-4 text-gray-600 hover:text-gray-900 text-sm">Maybe
+        later</button>
     </div>
   </div>
 
